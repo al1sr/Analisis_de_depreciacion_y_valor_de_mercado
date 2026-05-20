@@ -44,7 +44,7 @@ Para evitar sesgos estadísticos, se aplicaron filtros basados en el conocimient
    
 2. **Ejecutar el notebook**
 
-Para visualizar o replicar este análisis, abre el archivo `solucion_EDA_libre.ipynb` en tu entorno preferido:
+   Para visualizar o replicar este análisis, abre el archivo `solucion_EDA_libre.ipynb` en tu entorno preferido:
 
 * **Jupyter Notebook** o **JupyterLab**.
 * **VS Code** (asegúrate de tener instalada la extensión de *Jupyter*).
@@ -52,7 +52,7 @@ Para visualizar o replicar este análisis, abre el archivo `solucion_EDA_libre.i
 
 3. **Dataset**
 
-El dataset original utilizado para este estudio puede encontrarse en:
+   El dataset original utilizado para este estudio puede encontrarse en:
 
 * **Kaggle:** [Car Sales Dataset in Ukraine](https://www.kaggle.com/datasets/swatikhedekar/eda-on-car-sales-dataset-in-ukraine/data)
 
