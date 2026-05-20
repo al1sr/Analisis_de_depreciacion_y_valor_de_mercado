@@ -1,70 +1,62 @@
-# Análisis de depreciación y valor de mercado: coches en Ucrania
+# Depreciation and market value analysis: cars in Ukraine
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
 
-## Descripción del proyecto
-Este proyecto realiza un **Análisis Exploratorio de Datos (EDA)** detallado sobre un dataset de más de **9.500 ventas de automóviles** en Ucrania. 
+## Project description
+This project carries out a detailed **Exploratory Data Analysis (EDA)** on a dataset of over **9,500 car sales** in Ukraine. 
 
-El objetivo principal es identificar patrones de precios, analizar la depreciación de los vehículos y limpiar inconsistencias para obtener métricas fiables del mercado de segunda mano. Es un ejercicio de limpieza de datos real donde la calidad del dato prima sobre la cantidad.
+The main objective is to identify pricing patterns, analyse vehicle depreciation and clean up inconsistencies to obtain reliable metrics for the second-hand market. It is a real-world data cleaning exercise where data quality takes precedence over quantity.
 
----
+## Technologies used
+* **Python**: the core language for the analysis.
+* **Pandas**: the cornerstone for data manipulation and cleaning.
+* **Matplotlib / Seaborn**: visualisation tools for outlier detection and distribution analysis.
 
-## Tecnologías utilizadas
-* **Python**: lenguaje base del análisis.
-* **Pandas**: piedra angular para la manipulación y limpieza de datos.
-* **Matplotlib / Seaborn**: herramientas de visualización para la detección de valores atípicos y análisis de distribución.
+## Phases of the analysis
 
----
+### 1. Data cleaning and transformation 
+Critical adjustments were made to ensure the integrity of the results:
+* **Type conversion**: transformation of variables from `object` to `float` (specifically in the price and engine capacity columns).
+* **Normalisation**: adjustment of decimal separators and removal of non-numeric characters.
 
-## Fases del análisis
+### 2. Handling outliers 
+To avoid statistical bias, filters were applied based on an understanding of the automotive market:
+* **Prices**: the range was restricted to between **€500** and **€150,000**. This eliminates ‘bait ads’ and ultra-luxury vehicles that distort the mean.
+* **Engine capacity (engV)**: the logical range between **0.5L and 7L** was maintained, eliminating data entry errors.
 
-### 1. Limpieza y transformación de datos 
-Se realizaron ajustes críticos para asegurar la integridad de los resultados:
-* **Conversión de tipos**: transformación de variables de `object` a `float` (específicamente en columnas de precio y cilindrada).
-* **Normalización**: ajuste de separadores decimales y eliminación de caracteres no numéricos.
+### 3. Key findings 
+* **The ‘price 0’ conundrum**: it was found that **24.34%** of these cases correspond to new cars (2016 model year), indicating that the price is often ‘on request’ at dealerships.
+* **Stabilisation**: following filtering, the closeness between the mean and the median confirms that the data now accurately reflects market reality.
 
-### 2. Tratamiento de valores atípicos (outliers) 
-Para evitar sesgos estadísticos, se aplicaron filtros basados en el conocimiento del dominio del mercado automotriz:
-* **Precios**: se acotó el rango entre **500€** y **150.000€**. Esto elimina "anuncios gancho" y vehículos de lujo extremo que distorsionan la media.
-* **Cilindrada (engV)**: se mantuvo el rango lógico entre **0.5L y 7L**, eliminando errores de entrada de datos.
+## How to run it?
 
-### 3. Hallazgos clave 
-* **El enigma del "precio 0"**: se descubrió que el **24.34%** de estos casos corresponden a coches nuevos (año 2016), lo que indica que el precio suele ser "bajo consulta" en concesionarios.
-* **Estabilización**: tras el filtrado, la cercanía entre la media y la mediana confirma que los datos ahora representan fielmente la realidad del mercado.
-
----
-
-## ¿Cómo ejecutarlo?
-
-1. **Clonar el repositorio:**
+1. **Clone the repository:**
    ```bash
    git clone [https://github.com/tu-usuario/tu-repositorio.git](https://github.com/tu-usuario/tu-repositorio.git)
    
-2. **Ejecutar el notebook**
+2. **Run the notebook**
 
-   Para visualizar o replicar este análisis, abre el archivo `solucion_EDA_libre.ipynb` en tu entorno preferido:
+   To view or replicate this analysis, open the file `solucion_EDA_libre.ipynb` in your preferred environment:
 
-* **Jupyter Notebook** o **JupyterLab**.
-* **VS Code** (asegúrate de tener instalada la extensión de *Jupyter*).
-* **Google Colab** (puedes subir el archivo `.ipynb` directamente a una nueva sesión).
+* **Jupyter Notebook** or **JupyterLab**.
+* **VS Code** (make sure you have the *Jupyter* extension installed).
+* **Google Colab** (you can upload the `.ipynb` file directly to a new session).
 
 3. **Dataset**
 
-   El dataset original utilizado para este estudio puede encontrarse en:
+   The original dataset used for this study can be found at:
 
-* **Kaggle:** [Car Sales Dataset in Ukraine](https://www.kaggle.com/datasets/swatikhedekar/eda-on-car-sales-dataset-in-ukraine/data)
+* **Kaggle:** [Car Sales Dataset in Ukraine](https://www.kaggle.com/dataset
 
-## Contexto académico
+## Academic context
 
-Este proyecto fue realizado como parte de mis prácticas del **Máster en Data Science**, con el objetivo de demostrar habilidades en:
-* **Limpieza de datos complejos**: manejo de tipos de datos incorrectos y formatos inconsistentes.
-* **Tratamiento de valores atípicos**: aplicación de lógica de negocio para filtrar *outliers*.
-* **Visualización estadística**: creación de gráficos para extraer insights de mercado.
+This project was carried out as part of my work placement for the **Master’s in Data Science**, with the aim of demonstrating skills in:
+* **Complex data cleaning**: handling incorrect data types and inconsistent formats.
+* **Handling outliers**: applying business logic to filter outliers.
+* **Statistical visualisation**: creating charts to extract market insights.
 
----
+**Developed by:** Alicia Santamaría Román 
 
-**Desarrollado por:** Alicia Santamaría Román 
-
-**Contacto:** https://linkedin.com/in/aliciasantamariaroman
+**Contact:** https://linkedin.com/in/aliciasantamariaroman
