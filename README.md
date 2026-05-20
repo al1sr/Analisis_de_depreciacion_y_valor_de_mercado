@@ -50,7 +50,7 @@ Para visualizar o replicar este análisis, abre el archivo `solucion_EDA_libre.i
 * **VS Code** (asegúrate de tener instalada la extensión de *Jupyter*).
 * **Google Colab** (puedes subir el archivo `.ipynb` directamente a una nueva sesión).
 
-3.- **Dataset**
+3. **Dataset**
 
 El dataset original utilizado para este estudio puede encontrarse en:
 
